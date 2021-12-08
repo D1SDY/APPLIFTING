@@ -24,6 +24,7 @@ flask run
 
 ## How to use the application 
 
+### User registration and login API
 Firstly you should register the user (I know that you said that API shoudn't have the authorization, but if I will have it it will be bonus points :)))) )<br>
 You can make this with /user/create POST endpoint: <br>
 Request:<br>
@@ -49,7 +50,7 @@ Response:<br>
 {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"x-access-token": "your_access_token"<br>
 }<br>
-
+### Product API
 To create the product you can use the /product/create POST endpoint: <br>
 Request:<br>
 {<br>
