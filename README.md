@@ -1,4 +1,4 @@
-##How to run and serve the application 
+## How to run and serve the application 
 
 Use the package manager pipenv to create the virtual env
 
@@ -22,10 +22,10 @@ flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-##How to use the application 
+## How to use the application 
 
 Firstly you should register the user (I know that you said that API shoudn't have the authorization, but if I will have it it will be bonus points :)))) )<br>
-You can make this with /user/create endpoint: <br>
+You can make this with /user/create POST endpoint: <br>
 Request:<br>
 {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"username":"some_username",<br>
@@ -38,3 +38,72 @@ Response:<br>
 
 You can use that access token to autenticate all your API requests with {"Authorization" : "Bearer <your_token>"} header. <br>
 
+Also to login you can use the /user/login POST endpoint: <br>
+
+Request:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"username":"some_username",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"password": "123"<br>
+}<br>
+Response:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"x-access-token": "your_access_token"
+}<br>
+
+To create the product you can use the /product/create POST endpoint: <br>
+Request:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":"some_name",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description"<br>
+}<br>
+Response:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "some_name,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+}<br>
+
+To get the singe product you can use the /product/<product_id>  GET endpoint: <br>
+Response:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": <product_id> ,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "some_name,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+}<br>
+
+To update the product you can use the /product/<product_id> PUT  endpoint: <br>
+Request:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":"new_name",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "new_description"<br>
+}<br>
+Response:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": <product_id>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "new_name,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "new_description",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+}<br>
+
+To delete the product you can use the /product/<product_id> DELETE  endpoint: <br>
+
+Response:<br>
+
+204 Status code <br>
+
+To get all offers for certain product you can use the /product/get_all_offers/<product_id> GET  endpoint: <br>
+
+Response:<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+}<br>
+
+## How to run tests
+
+Make sure that you are in the root directory, and run 
+
+```bash
+pytest
+```
