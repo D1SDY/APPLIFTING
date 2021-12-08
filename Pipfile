@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+sqlalchemy = "*"
+flask-restful = "*"
+marshmallow = "*"
+flask-sqlalchemy = "*"
+requests = "*"
+python-dotenv = "*"
+apscheduler = "*"
+flask-apscheduler = "*"
+tzlocal = "==2.1"
+schema = "*"
+pytest = "*"
+flask-bcrypt = "*"
+pyjwt = "*"
+flask-jwt-extended = "*"
+passlib = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
