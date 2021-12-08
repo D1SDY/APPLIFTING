@@ -26,9 +26,12 @@ def create_app():
 
 
     )
+    #Loads all envirement variable from .env file
     load_dotenv()
     API_TOKEN = os.environ.get('API_TOKEN')
     APPLIFTING_BASE_URL = os.environ.get('APPLIFTING_BASE_URL')
+    #Check if API_TOKEN envirement variable presesnt, if not, make a API call to register API token 
+    # and store it in .env file for future usage
     if API_TOKEN is None:
         r = requests.post(APPLIFTING_BASE_URL.format('auth')).text
         access_token_env = "\nAPI_TOKEN={0}".format(json.loads(r).get('access_token'))

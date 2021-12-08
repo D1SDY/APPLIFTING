@@ -33,7 +33,7 @@ Request:<br>
 }<br>
 Response:<br>
 {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"x-access-token": "your_access_token"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"x-access-token": "your_access_token"<br>
 }<br>
 
 You can use that access token to autenticate all your API requests with {"Authorization" : "Bearer <your_token>"} header. <br>
@@ -47,7 +47,7 @@ Request:<br>
 }<br>
 Response:<br>
 {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"x-access-token": "your_access_token"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"x-access-token": "your_access_token"<br>
 }<br>
 
 To create the product you can use the /product/create POST endpoint: <br>
@@ -58,19 +58,19 @@ Request:<br>
 }<br>
 Response:<br>
 {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "some_name,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": 1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "some_name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []<br>
 }<br>
 
 To get the singe product you can use the /product/<product_id>  GET endpoint: <br>
 Response:<br>
 {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": <product_id> ,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "some_name,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": <product_id> ,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "some_name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "some_description",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []<br>
 }<br>
 
 To update the product you can use the /product/<product_id> PUT  endpoint: <br>
@@ -81,10 +81,10 @@ Request:<br>
 }<br>
 Response:<br>
 {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": <product_id>,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "new_name,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "new_description",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": <product_id>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "new_name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "new_description",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []<br>
 }<br>
 
 To delete the product you can use the /product/<product_id> DELETE  endpoint: <br>
@@ -97,7 +97,7 @@ To get all offers for certain product you can use the /product/get_all_offers/<p
 
 Response:<br>
 {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"offers": []<br>
 }<br>
 
 ## How to run tests
